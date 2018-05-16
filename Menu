@@ -1,0 +1,69 @@
+#!/bin/bash
+
+trap '' 2 # block ^d command
+while true # endless loop structure
+do
+
+   clear # clear the display and show the menu.
+
+   echo "========================="
+
+   echo "-------Thread Menu -------"
+
+   echo "========================="
+
+   echo   "Levels of Difficulties"
+
+   echo "1) Level 1 : Low difficulty. The Rover solve the problem easy."
+
+   echo
+   echo "2) Level 2 : Medium difficulty. The Rover need to know which wheel is with problems before to solve it."
+
+   echo
+   echo "3) Level 3 : Hard difficulty. The Rover ask you how many wheels are with problems and which are these."
+
+   echo
+   echo "4) Level 4 : Very hard difficulty. The Rover can't solve a problem just if you send him the instructions."
+
+   echo
+   echo "5) Level 5 : Insane difficulty. All above difficulties plus obstacles."
+
+   echo
+   echo "Enter exit to exit the menu "
+   echo
+
+
+   echo -e "\n"
+
+   echo -e "Enter your selection \c"
+
+   read answer # read select input from menu. The answer can be 1,2,3 or exit.
+
+
+
+   case "$answer" in # case is use to select the command according to variable answer.
+
+     1) python robot.py ;;
+
+     2) python robot2.py  ;;
+
+     3) python robot3.py  ;;
+
+     4) python robot4.py  ;;
+
+     5) python robot5.py  ;;
+
+     exit) exit ;;
+
+ # exit the program.
+   esac
+
+
+   echo -e "Enter return to continue \c"
+
+   read input
+
+# read enter to enter in the menu.
+ done
+
+ :2 # block ^d command
